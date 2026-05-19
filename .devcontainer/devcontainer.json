@@ -4,5 +4,6 @@
 	"name": "My Clojure/Clojurescript app",
 	"dockerFile": "../Containerfile",
 	"context": "..",
-	"remoteUser": "devuser"
+	"remoteUser": "devuser",
+	"postCreateCommand": "npx -y create-cljs-app app"
 }

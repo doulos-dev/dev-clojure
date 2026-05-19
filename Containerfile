@@ -10,7 +10,6 @@ ENV LANG=en_US.UTF-8 \
     LC_ALL=en_US.UTF-8
 
 RUN useradd -ms /bin/bash devuser
+RUN npx -y create-cljs-app app 
 USER devuser
 WORKDIR /home/devuser/app
-
-COPY --chown=devuser:devuser app/ .
