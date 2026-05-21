@@ -1,4 +1,4 @@
-FROM clojure:temurin-8-trixie-slim
+FROM docker.io/clojure:temurin-8-trixie-slim
 
 RUN apt-get update && apt-get install -y gcc git curl bash locales leiningen nodejs npm \
     && sed -i '/en_US.UTF-8/s/^# //g' /etc/locale.gen \
@@ -13,3 +13,4 @@ RUN useradd -ms /bin/bash devuser
 RUN npx -y create-cljs-app app 
 USER devuser
 WORKDIR /home/devuser/app
+  
